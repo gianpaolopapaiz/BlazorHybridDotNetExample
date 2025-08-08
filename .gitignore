@@ -1,0 +1,53 @@
+# .gitignore for .NET MAUI / Blazor Hybrid App
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Mac build files
+*.DS_Store
+
+# Logs
+*.log
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Icon?
+.DS_Store
+
+# Rider
+.idea/
+*.sln.iml
+
+# Maui specific
+**/Platforms/Android/obj/
+**/Platforms/Android/bin/
+**/Platforms/iOS/obj/
+**/Platforms/iOS/bin/
+**/Platforms/MacCatalyst/obj/
+**/Platforms/MacCatalyst/bin/
+**/Platforms/Tizen/obj/
+**/Platforms/Tizen/bin/
+**/Platforms/Windows/obj/
+**/Platforms/Windows/bin/
+
+# NuGet
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+# except build/, which is used as an MSBuild target.
+!**/packages/build/
+# Uncomment if you have tasks that create the project's static files in wwwroot
+#wwwroot/
+
+# Local secrets
+secrets.json
