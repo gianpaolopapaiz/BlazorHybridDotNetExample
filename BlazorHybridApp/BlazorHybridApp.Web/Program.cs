@@ -1,6 +1,7 @@
 using BlazorHybridApp.Web.Components;
 using BlazorHybridApp.Shared.Services;
 using BlazorHybridApp.Web.Services;
+using MudBlazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,9 @@ builder.Services.AddRazorComponents()
 
 // Add device-specific services used by the BlazorHybridApp.Shared project
 builder.Services.AddSingleton<IFormFactor, FormFactor>();
+
+// Add MudBlazor services
+builder.Services.AddMudServices();
 
 var app = builder.Build();
 

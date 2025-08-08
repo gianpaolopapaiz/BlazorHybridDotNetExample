@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using BlazorHybridApp.Shared.Services;
 using BlazorHybridApp.Services;
+using MudBlazor.Services;
 
 namespace BlazorHybridApp;
 
@@ -20,6 +21,9 @@ public static class MauiProgram
         builder.Services.AddSingleton<IFormFactor, FormFactor>();
 
         builder.Services.AddMauiBlazorWebView();
+        
+        // Add MudBlazor services
+        builder.Services.AddMudServices();
 
 #if DEBUG
         builder.Services.AddBlazorWebViewDeveloperTools();
