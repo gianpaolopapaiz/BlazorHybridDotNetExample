@@ -1,0 +1,29 @@
+@using BlazorHybridApp.Shared.Components
+@using BlazorHybridApp.Shared.Models
+@using System.Data.Common
+
+@page "/accounts"
+
+
+<PageTitle>Accounts</PageTitle>
+
+<MudText Typo="Typo.h4" GutterBottom="true">Accounts</MudText>
+
+<MudStack
+    Row="true"
+    Spacing="3"
+>
+    @foreach (var Account in AccountsList) 
+    {
+        <AccountCard Account=@Account />
+    }
+</MudStack>
+
+@code {
+    List<FinancialAccount> AccountsList = new List<FinancialAccount>
+    {
+        new FinancialAccount { Id = 1, Name = "Personal Savings", Description = "My personal savings account", Balance = 1500.00m, Currency = "USD" },
+        new FinancialAccount { Id = 2, Name = "Business Checking", Description = "Business checking account", Balance = 5000.00m, Currency = "USD" },
+        new FinancialAccount { Id = 3, Name = "Investment Account", Description = "Investment account for stocks and bonds", Balance = 20000.00m, Currency = "USD" }
+    };
+} 
